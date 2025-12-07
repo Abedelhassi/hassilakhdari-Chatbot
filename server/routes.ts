@@ -4,7 +4,7 @@ import { GoogleGenAI } from "@google/genai";
 import { chatRequestSchema } from "@shared/schema";
 import { z } from "zod";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY || "" });
 
 export async function registerRoutes(
   httpServer: Server,
@@ -24,7 +24,7 @@ export async function registerRoutes(
 
       const { message, history } = parsed.data;
 
-      if (!process.env.GEMINI_API_KEY) {
+      if (!process.env.GOOGLE_API_KEY && !process.env.GEMINI_API_KEY) {
         return res.status(500).json({ 
           error: "Gemini API key not configured" 
         });

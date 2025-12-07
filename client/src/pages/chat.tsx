@@ -87,7 +87,7 @@ function EmptyState({ onPromptClick }: { onPromptClick: (prompt: string) => void
         <Sparkles className="w-10 h-10 text-primary" />
       </div>
       <h1 className="text-2xl font-semibold mb-2" data-testid="text-welcome-title">
-        Chat with Gemini AI
+        Chat with Hassib AI
       </h1>
       <p className="text-muted-foreground mb-8" data-testid="text-welcome-subtitle">
         Ask me anything...
@@ -269,7 +269,7 @@ export default function Chat() {
       <header className="flex items-center justify-between gap-4 h-16 px-4 md:px-6 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="flex items-center gap-2">
           <Sparkles className="w-6 h-6 text-primary" />
-          <h1 className="text-lg font-semibold" data-testid="text-app-title">Gemini Chat</h1>
+          <h1 className="text-lg font-semibold" data-testid="text-app-title">Hassib Chat</h1>
         </div>
         <AlertDialog>
           <AlertDialogTrigger asChild>

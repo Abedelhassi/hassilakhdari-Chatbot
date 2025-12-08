@@ -56,6 +56,13 @@ npm run build
 # Start the server
 npm run start
 The app will be running at http://localhost:5000 (or the port specified in your console).
+######
+
+
+
+
+
+
 
 📂 Project Structure
 ├── client/         # Frontend React application
